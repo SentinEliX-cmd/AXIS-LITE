@@ -31,3 +31,7 @@ built on Agent Zero, running on consumer hardware (RTX 3050).
 - granite4:350m (utility)
 - granite-embedding:278m (memory)
 - Kali Linux (execution environment)
+
+## Results
+### Nikto Scan - A0 Autonomous Execution
+![Nikto Scan](results/nikto-scan.png)
