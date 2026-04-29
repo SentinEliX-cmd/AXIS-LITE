@@ -1,0 +1,47 @@
+# AXIS-LITE .gitignore
+
+# --- SECRETS & SENSITIVE DATA ---
+.env
+*.env
+.env.*
+
+# --- BLOCK ALL OF DATA/ ---
+data/
+
+# --- EXCEPT SAFE CONFIGURATION FILES ---
+!data/.gitkeep
+!data/prompts/
+!data/prompts/.gitkeep
+!data/prompts/specifics.md
+!data/agents/
+!data/agents/.gitkeep
+!data/agents/agent0/
+!data/agents/agent0/behaviour.md
+!data/knowledge/
+!data/knowledge/.gitkeep
+!data/knowledge/main/
+!data/knowledge/main/.gitkeep
+!data/knowledge/solutions/
+!data/knowledge/solutions/.gitkeep
+
+# --- EXPLICITLY IGNORE SENSITIVE DATA ---
+data/.time_travel/
+data/chats/
+data/memory/
+data/plugins/
+data/workdir/
+data/skills/
+data/uploads/
+data/scheduler/
+data/settings.json
+
+# --- OS GARBAGE ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- EDITORS ---
+.vscode/
+.idea/
+*.swp
+*.swo

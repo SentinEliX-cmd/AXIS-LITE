@@ -1,0 +1,11 @@
+services:
+  agent-zero:
+    container_name: agent-zero
+    image: agent0ai/agent-zero:latest
+    volumes:
+      - ./data:/a0/usr
+      - ../wordlists:/usr/share/wordlists
+    ports:
+      -  "8088:80"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
