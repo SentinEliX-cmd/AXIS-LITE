@@ -4,7 +4,7 @@
 
 ![Agent Zero](https://img.shields.io/badge/Agent%20Zero-v1.10-blue)
 ![Ollama](https://img.shields.io/badge/Ollama-Cloud%20API-green)
-![Model](https://img.shields.io/badge/Model-qwen3.5%3A397b-purple)
+![Model](https://img.shields.io/badge/Model-qwen3.5%3Acloud-purple)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
