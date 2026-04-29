@@ -6,6 +6,8 @@ services:
       - ./data:/a0/usr
       - ../wordlists:/usr/share/wordlists
     ports:
-      -  "8088:80"
+      - "8088:80"
     environment:
-      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_BASE_URL=https://api.ollama.com
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+      - OLLAMA_EMBED_BASE_URL=http://host.docker.internal:11434

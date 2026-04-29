@@ -2,8 +2,6 @@
 
 # --- SECRETS & SENSITIVE DATA ---
 .env
-*.env
-.env.*
 
 # --- BLOCK ALL OF DATA/ ---
 data/

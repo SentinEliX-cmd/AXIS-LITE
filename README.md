@@ -1,9 +1,10 @@
 # AXIS-LITE 🔺
 
-> **Local AI Security Agent** — Hybrid offensive/defensive security workflows powered by Agent Zero + Ollama API. Fully local. No cloud keys required.
+> **AI Security Agent** — Hybrid offensive/defensive security workflows powered by Agent Zero + Ollama Cloud API (qwen3.5:397b). Runs via Docker on Windows 11.
 
 ![Agent Zero](https://img.shields.io/badge/Agent%20Zero-v1.10-blue)
-![Ollama](https://img.shields.io/badge/Ollama-API-green)
+![Ollama](https://img.shields.io/badge/Ollama-Cloud%20API-green)
+![Model](https://img.shields.io/badge/Model-qwen3.5%3A397b-purple)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
@@ -11,7 +12,7 @@
 
 ## What is AXIS-LITE?
 
-AXIS-LITE is a locally-hosted AI security agent stack built on [Agent Zero](https://github.com/agent0ai/agent-zero). It uses Ollama's free local API (no modelfiles, no cloud) to power a stateful penetration testing and security research agent.
+AXIS-LITE is an AI security agent stack built on [Agent Zero](https://www.agent-zero.ai/). It uses the Ollama Cloud API with `qwen3.5:397b` to power a stateful penetration testing and security research agent, running via Docker on Windows 11.
 
 Three operational profiles:
 
@@ -28,7 +29,8 @@ Three operational profiles:
 | Component | Details |
 |---|---|
 | Agent Framework | Agent Zero v1.10 (`agent0ai/agent-zero:latest`) |
-| LLM Backend | Ollama local API (`http://host.docker.internal:11434`) |
+| Chat Model | Ollama Cloud API (`https://api.ollama.com`) — `qwen3.5:cloud` |
+| Embed Model | Local Ollama (`http://host.docker.internal:11434`) — `granite-embedding:278m` |
 | Runtime | Docker Desktop (Windows 11) |
 | Web UI | `http://localhost:8088` |
 | Wordlists | Mounted from `../wordlists` → `/usr/share/wordlists` |
