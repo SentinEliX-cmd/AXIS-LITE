@@ -1,6 +1,6 @@
 # AXIS-LITE 🔺
 
-> **AI Security Agent** — Hybrid offensive/defensive security workflows powered by Agent Zero + Ollama Cloud API (qwen3.5:397b). Runs via Docker on Windows 11.
+> **AI Security Agent** — Hybrid offensive/defensive security workflows powered by Agent Zero + Ollama Cloud API (qwen3.5:cloud). Runs via Docker on Windows 11.
 
 ![Agent Zero](https://img.shields.io/badge/Agent%20Zero-v1.10-blue)
 ![Ollama](https://img.shields.io/badge/Ollama-Cloud%20API-green)
@@ -12,7 +12,7 @@
 
 ## What is AXIS-LITE?
 
-AXIS-LITE is an AI security agent stack built on [Agent Zero](https://www.agent-zero.ai/). It uses the Ollama Cloud API with `qwen3.5:397b` to power a stateful penetration testing and security research agent, running via Docker on Windows 11.
+AXIS-LITE is an AI security agent stack built on [Agent Zero](https://www.agent-zero.ai/). It uses the Ollama Cloud API with `qwen3.5:cloud` to power a stateful penetration testing and security research agent, running via Docker on Windows 11.
 
 Three operational profiles:
 
@@ -35,7 +35,7 @@ Three operational profiles:
 | Web UI | `http://localhost:8088` |
 | Wordlists | Mounted from `../wordlists` → `/usr/share/wordlists` |
 
-> No Modelfiles. Ollama serves models via free local API. Swap models in the Agent Zero UI.
+> No Modelfiles. Ollama serves models via free cloud API (chat) + local API (embeddings). Swap models in the Agent Zero UI.
 
 ---
 
@@ -86,7 +86,9 @@ cd AXIS-LITE
 ### 2. Pull a model via Ollama
 
 ```bash
-ollama pull qwen2.5:7b
+# Chat model runs via Ollama Cloud API — no local pull needed
+# For embeddings model:
+ollama pull granite-embedding:278m
 ```
 
 Any model works. Set it in the Agent Zero UI after launch.
